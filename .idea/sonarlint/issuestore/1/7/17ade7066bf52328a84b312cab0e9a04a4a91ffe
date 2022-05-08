@@ -1,0 +1,13 @@
+
+W
+java:S1854":Remove this useless assignment to local variable "result".(íª÷’8Ã½®†0
+R
+java:S1854"5Remove this useless assignment to local variable "n".(·Íå‹8·¯»®†0
+C
+java:S1481"&Remove this unused "n" local variable.(·Íå‹8¹¯»®†0
+H
+java:S1481"+Remove this unused "result" local variable.(íª÷’8‘Ã½®†0
+V
+java:S3400"9Remove this method and declare a constant for this value.(”·³›8Ï¥¾®†0
+Q
+java:S1172"4Remove these unused method parameters "s", "d", "m".(í·°8 ×½®†0

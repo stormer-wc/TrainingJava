@@ -1,0 +1,10 @@
+
+`	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ
+a
+java:S1192"FDefine a constant instead of duplicating this literal "\\s+$" 3 times.(£Ñùùÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ÜÑ¬ùÿÿÿÿ
+f	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™«¬ä
+A
+java:S1481"&Remove this unused "n" local variable.(ˆü×‘øÿÿÿÿ
+Z	java:S106;"9Replace this use of System.out or System.err by a logger.(Ò‘õ©ùÿÿÿÿ8½ÈÕ­†0
+Z	java:S106?"9Replace this use of System.out or System.err by a logger.(‰ú£ûûÿÿÿÿ8½ÈÕ­†0
