@@ -35,3 +35,8 @@ S
 #src/main/java/code/FindingDemo.java,0/7/07ce84695f4cae17f44050acb85098072ba34f68
 M
 src/main/java/code/Vovel.java,c/e/ce06fb097004d0f7ee2f401404898f42208a5c06
+:
+
+readme.txt,4/5/451685e9efac4a6dc1fee73ec53ffb6b2c4c38b5
+e
+5src/main/java/code/week1/SubArrayDivision1Solved.java,2/8/286d6da9444d74d2cdd6288a87f0d499e49d6e10
