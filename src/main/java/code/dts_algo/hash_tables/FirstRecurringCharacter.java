@@ -21,6 +21,7 @@ public class FirstRecurringCharacter {
   public static void main(String[] args) {
     int[] arr = {2, 5, 5, 2, 3, 5, 1, 2, 4};
     findDuplicate(arr);
+    solution1(arr);
   }
 
   static void findDuplicate(int[] arr) {
@@ -38,4 +39,16 @@ public class FirstRecurringCharacter {
     // when all value not have duplicate
     System.out.println("undefined");
   }
-}
+
+  static void solution1(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[i] == arr[j]) {
+          System.out.println("contain: " + arr[i]);
+          return;
+        }
+      }
+    }
+    System.out.println("undefined");
+  }
+} // O(n^n)
