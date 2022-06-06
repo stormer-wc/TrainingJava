@@ -1,4 +1,4 @@
-package code.dts_algo;
+package code.dts_algo.arrays;
 
 import java.util.Arrays;
 
