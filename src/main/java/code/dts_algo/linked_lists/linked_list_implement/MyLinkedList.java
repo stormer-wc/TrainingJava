@@ -2,6 +2,7 @@ package code.dts_algo.linked_lists.linked_list_implement;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MyLinkedList {
@@ -17,15 +18,27 @@ public class MyLinkedList {
   }
 
   public static void main(String[] args) {
-    MyLinkedList myLinkedList = new MyLinkedList(10);
-    myLinkedList.append(5);
+    // Custom Linked List
+    MyLinkedList myLinkedList = new MyLinkedList(22);
+    myLinkedList.append(3);
     myLinkedList.append(16);
-    myLinkedList.prepend(22);
+    myLinkedList.prepend(23);
     myLinkedList.insert(3, 69);
     myLinkedList.printList();
     myLinkedList.lookup(3);
     myLinkedList.remove(2);
     myLinkedList.printList();
+    myLinkedList.myReverse();
+    myLinkedList.printList();
+    // built-in Linked List
+    LinkedList<Integer> list = new LinkedList<>();
+    list.add(2);
+    list.add(3);
+    list.addFirst(1);
+    list.removeLast();
+    System.out.println(list);
+    list.remove(0);
+    System.out.println(list);
   }
 
   public void append(int value) {
@@ -76,6 +89,23 @@ public class MyLinkedList {
     // skip unwanted node by change pointer
     start.next = traverseToIndex(index + 1);
     length--;
+  }
+
+  public void myReverse() {
+    if (this.head.value == 1) {
+      return;
+    }
+    this.tail = this.head;
+    Node first = this.head;
+    Node second = this.head.next;
+    while (second != null) {
+      Node temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null;
+    this.head = first;
   }
 
   public Node traverseToIndex(int index) {
