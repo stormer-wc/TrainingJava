@@ -184,6 +184,7 @@ public class BinarySearchTree {
             }
           }
         }
+        return;
       }
     }
   }
