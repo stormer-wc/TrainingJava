@@ -1,4 +1,4 @@
-package code.dts_algo.queues;
+package code.dts.stacks;
 
 public class Node {
 

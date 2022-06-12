@@ -1,4 +1,4 @@
-package code.dts_algo.trees.binary_tree;
+package code.dts.trees.binary_tree;
 
 public class BinarySearchTree {
 

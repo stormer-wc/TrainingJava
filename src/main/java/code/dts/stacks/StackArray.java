@@ -1,4 +1,4 @@
-package code.dts_algo.stacks;
+package code.dts.stacks;
 
 import java.util.ArrayList;
 import java.util.Arrays;

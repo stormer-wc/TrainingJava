@@ -1,4 +1,4 @@
-package code.dts_algo.linked_lists.linked_list_implement;
+package code.dts.linked_lists.linked_list_implement;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package code.dts_algo.linked_lists.double_linked_list;
+package code.dts.linked_lists.double_linked_list;
 
 public class Node {
 

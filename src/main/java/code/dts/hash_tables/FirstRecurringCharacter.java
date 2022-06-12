@@ -1,4 +1,4 @@
-package code.dts_algo.hash_tables;
+package code.dts.hash_tables;
 
 import java.util.*;
 

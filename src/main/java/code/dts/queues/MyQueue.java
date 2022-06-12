@@ -1,4 +1,4 @@
-package code.dts_algo.queues;
+package code.dts.queues;
 
 import java.util.ArrayList;
 import java.util.Arrays;
