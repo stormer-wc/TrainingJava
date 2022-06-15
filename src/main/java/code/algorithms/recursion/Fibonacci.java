@@ -1,5 +1,7 @@
 package code.algorithms.recursion;
 
+import java.util.ArrayList;
+
 public class Fibonacci {
 
   // Given a number N return the index value of the Fibonacci sequence, where the sequence is:
@@ -12,36 +14,29 @@ public class Fibonacci {
 
   public static void main(String[] args) {
     Fibonacci fc = new Fibonacci();
-    // n must more than 2
     int num = fc.fibonacciIterative(5);
     System.out.println(num);
     num = fc.fibonacciRecursive(5);
     System.out.println(num);
   }
 
-  // n=3 -> 1+2
   private int fibonacciIterative(int n) {
     if (n == 1) {
       return 1;
     }
-    int first = 0;
-    int second = 1;
-    int result = 0;
+    ArrayList<Integer> num = new ArrayList<>();
+    num.add(0);
+    num.add(1);
     for (int i = 2; i <= n; i++) {
-      result = first + second;
-      first = second;
-      second = result;
+      num.add(num.get(i - 1) + num.get(i - 2));
     }
-    return result;
-  }
+    return num.get(num.size() - 1);
+  } // O(n) faster than recursive.
 
   private int fibonacciRecursive(int n) {
-    if (n <= 0) {
-      return 0;
-    }
-    if (n == 1) {
-      return 1;
+    if (n < 2) {
+      return n;
     }
     return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
-  }
+  } // O(n^2), readable but slower.
 }
