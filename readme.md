@@ -1,11 +1,6 @@
 # Content of this Repository
-## Problem Solving
-### HackerRank
-- week1
-- week2
 
-## Data Structures & Algorithms
-### Data Structures
+## Data Structures
 - arrays
 - hash tables
 - linked lists
@@ -14,5 +9,7 @@
 - trees
 -- binary search tree
 
-### Algorithms
+## Algorithms
+- recursion
+- sorting
 *coming soon...
