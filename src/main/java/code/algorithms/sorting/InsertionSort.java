@@ -17,8 +17,8 @@ public class InsertionSort {
         // move number to the first position
         arr.add(0, arr.remove(i));
       } else {
-        // only sort number smaller than number on the left of it. This is the part of insertion
-        // sort that makes it fast if the array is almost sorted.
+        // only sort number smaller than number on the left of it.
+        // This is the part of insertion sort that makes it fast if the array is almost sorted.
         if (arr.get(i) < arr.get(i - 1)) {
           // find where number should go
           for (int j = 1; j < i; j++) {
