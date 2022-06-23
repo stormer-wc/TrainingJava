@@ -1,5 +1,7 @@
 package code.dts.trees.binary_tree;
 
+import java.util.ArrayList;
+
 public class BinarySearchTree {
 
   BTNode root;
@@ -15,7 +17,14 @@ public class BinarySearchTree {
     bt.insert(170);
     bt.lookup(6);
     bt.lookupSolution(6);
-    bt.remove(170);
+    bt.insert(171);
+    bt.remove(171);
+    ArrayList<Integer> sorted = bt.breathFirstSearch();
+    System.out.println(sorted);
+    // recursive BFS
+    ArrayList<BTNode> queue = new ArrayList<>();
+    queue.add(bt.root);
+    System.out.println(bt.breathFirstSearchRecursive(queue, new ArrayList<>()));
   }
 
   //     9
@@ -187,5 +196,40 @@ public class BinarySearchTree {
         return;
       }
     }
+  }
+
+  private ArrayList<Integer> breathFirstSearch() {
+    BTNode current = this.root;
+    ArrayList<Integer> result = new ArrayList<>();
+    ArrayList<BTNode> queue = new ArrayList<>();
+    queue.add(current);
+    while (!queue.isEmpty()) {
+      current = queue.remove(0);
+      result.add(current.value);
+
+      if (current.left != null) {
+        queue.add(current.left);
+      }
+      if (current.right != null) {
+        queue.add(current.right);
+      }
+    }
+    return result;
+  }
+
+  private ArrayList<Integer> breathFirstSearchRecursive(
+      ArrayList<BTNode> queue, ArrayList<Integer> list) {
+    if (queue.isEmpty()) {
+      return list;
+    }
+    BTNode current = queue.remove(0);
+    list.add(current.value);
+    if (current.left != null) {
+      queue.add(current.left);
+    }
+    if (current.right != null) {
+      queue.add(current.right);
+    }
+    return breathFirstSearchRecursive(queue, list);
   }
 }
