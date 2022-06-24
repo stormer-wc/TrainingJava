@@ -19,12 +19,22 @@ public class BinarySearchTree {
     bt.lookupSolution(6);
     bt.insert(171);
     bt.remove(171);
+
+    // BFS
+    System.out.print("BFS: ");
     ArrayList<Integer> sorted = bt.breathFirstSearch();
     System.out.println(sorted);
-    // recursive BFS
+    System.out.print("BFS recursive: ");
     ArrayList<BTNode> queue = new ArrayList<>();
     queue.add(bt.root);
     System.out.println(bt.breathFirstSearchRecursive(queue, new ArrayList<>()));
+    // DFS
+    System.out.print("DFS In Order: ");
+    bt.depthFirstSearch();
+    System.out.print("DFS Pre Order: ");
+    bt.depthFirstSearchPre();
+    System.out.print("DFS Post Order: ");
+    bt.depthFirstSearchPost();
   }
 
   //     9
@@ -231,5 +241,53 @@ public class BinarySearchTree {
       queue.add(current.right);
     }
     return breathFirstSearchRecursive(queue, list);
+  }
+
+  private void depthFirstSearch() {
+    ArrayList<Integer> result = new ArrayList<>();
+    traverseInOrder(this.root, result);
+    System.out.println(result);
+  }
+
+  private void depthFirstSearchPre() {
+    ArrayList<Integer> result = new ArrayList<>();
+    traversePreOrder(this.root, result);
+    System.out.println(result);
+  }
+
+  private void depthFirstSearchPost() {
+    ArrayList<Integer> result = new ArrayList<>();
+    traversePostOrder(this.root, result);
+    System.out.println(result);
+  }
+
+  private void traverseInOrder(BTNode node, ArrayList<Integer> list) {
+    if (node.left != null) {
+      traverseInOrder(node.left, list);
+    }
+    list.add(node.value);
+    if (node.right != null) {
+      traverseInOrder(node.right, list);
+    }
+  }
+
+  private void traversePreOrder(BTNode node, ArrayList<Integer> list) {
+    list.add(node.value);
+    if (node.left != null) {
+      traversePreOrder(node.left, list);
+    }
+    if (node.right != null) {
+      traversePreOrder(node.right, list);
+    }
+  } // parent to child
+
+  private void traversePostOrder(BTNode node, ArrayList<Integer> list) {
+    if (node.left != null) {
+      traversePostOrder(node.left, list);
+    }
+    if (node.right != null) {
+      traversePostOrder(node.right, list);
+    }
+    list.add(node.value);
   }
 }
